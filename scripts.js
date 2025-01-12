@@ -1,7 +1,11 @@
 <script>
 // scroll to a section and highlight the active link
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
     const links = document.querySelectorAll('nav a');
     links.forEach(link => link.classList.remove('active'));
